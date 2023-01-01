@@ -28,7 +28,6 @@ public abstract class Computer implements IReboot, IPowerOff,ITurnonGameMode,IEm
 	}
 	public Computer(CPU cpu, FAN fan, GPU gpu, Keyboard keyboard, Memory memory, Monitor monitor,
 			MotherBoard motherboard,  PowerSupply powerSupply, RAM ram,User user) {
-		super();
 		this.cpu = cpu;
 		this.fan = fan;
 		this.gpu = gpu;
@@ -139,9 +138,5 @@ public abstract class Computer implements IReboot, IPowerOff,ITurnonGameMode,IEm
 				&& Objects.equals(monitor, other.monitor) && Objects.equals(motherboard, other.motherboard)
 				&& Objects.equals(powerSupply, other.powerSupply) && Objects.equals(ram, other.ram);
 	}
-	
-	
-	
-	
-	
+
 }

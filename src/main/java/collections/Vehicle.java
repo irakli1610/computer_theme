@@ -8,7 +8,6 @@ public class Vehicle {
 	
 	
 	public Vehicle(String type, int relaseYear) {
-		super();
 		this.type = type;
 		this.relaseYear = relaseYear;
 	}
@@ -21,13 +20,12 @@ public class Vehicle {
 	public int getRelaseYear() {
 		return relaseYear;
 	}
-	@Override
-	public String toString() {
-		return " [type=" + type + ", relaseYear=" + relaseYear + "]";
-	}
-
 
 	public void setRelaseYear(int relaseYear) {
 		this.relaseYear = relaseYear;
+	}
+	@Override
+	public String toString() {
+		return " [type=" + type + ", relaseYear=" + relaseYear + "]";
 	}
 }

@@ -71,11 +71,8 @@ public class Main {
 		
 		
 		System.out.println(garage.peek());
-		garage.peek();
 		garage.poll();
-		System.out.println(garage.peek());
-
-		
+		System.out.println(garage.peek()); // value changed from 1 to two becouse 1 is already taken out by .poll() method
 	}
 
 }

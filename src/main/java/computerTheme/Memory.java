@@ -3,45 +3,47 @@ package computerTheme;
 import java.util.Objects;
 
 public class Memory {
-	//----fields
+	// ----fields
 	private String brandName;
-	private String memoryType;   //better would be to   make it with boolean type.
-	
-	//-----constructors
-	Memory(){}
-	Memory(String brandname, String memoryType)
-	{
+	private String memoryType;
+
+	// -----constructors
+	Memory() {
+	}
+
+	Memory(String brandname, String memoryType) {
 		this.brandName = brandname;
 		this.memoryType = memoryType;
 	}
-	
-	//------getters and setters
-	public String getBrandNAme()
-	{
+
+	// ------getters and setters
+	public String getBrandNAme() {
 		return brandName;
 	}
-	public void setBrandName(String brandName)
-	{
-		this.brandName= brandName;
+
+	public void setBrandName(String brandName) {
+		this.brandName = brandName;
 	}
-	public String getMemoryType()
-	{
+
+	public String getMemoryType() {
 		return memoryType;
 	}
-	public void setMemoryType(String memoryType)
-	{
-		this.memoryType= memoryType;
+
+	public void setMemoryType(String memoryType) {
+		this.memoryType = memoryType;
 	}
-	
-	
+
+	// ----methods
 	@Override
 	public String toString() {
-		return "Memory "+"\n"+"  brandName=" + brandName + "\n"+"  memoryType=" + memoryType +"\n" ;
+		return "Memory " + "\n" + "  brandName=" + brandName + "\n" + "  memoryType=" + memoryType + "\n";
 	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(brandName, memoryType);
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -53,7 +55,5 @@ public class Memory {
 		Memory other = (Memory) obj;
 		return Objects.equals(brandName, other.brandName) && Objects.equals(memoryType, other.memoryType);
 	}
-	
-	
-	
+
 }

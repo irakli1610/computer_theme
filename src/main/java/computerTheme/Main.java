@@ -1,5 +1,15 @@
 package computerTheme;
 
+import java.util.function.BiConsumer;
+
+import Interfaces.IEmail;
+import enums.Continents;
+import enums.DaysOfTheWeek;
+import enums.Months;
+import lambda.IAdd;
+import lambda.IMove;
+import lambda.IPrint;
+import lambda.IAction;
 
 public class Main {
 
@@ -53,11 +63,47 @@ public class Main {
        	Laptop lenovoLap = new Laptop();
        	
 
-       	firstLaptopInMyLife.reboot(6, 15 );
+       //	firstLaptopInMyLife.reboot(6, 15 );
 
        	//firstLaptopInMyLife.isOpen =true;
        //	myPC.emailSomeone("here", receiver);
-       	myPC.powerComputer();
+       	//myPC.powerComputer();
+       	
+       	DaysOfTheWeek day1 = DaysOfTheWeek.MONDAY;
+       	System.out.println(day1);
+       	
+       	System.out.println(Continents.AFRICA.getArea());
+       	System.out.println(Months.DECEMBER);
+       	
+       	//--------------------------
+       	IMove catMove = () -> System.out.println("cat is moving");
+		catMove.move();
+		
+		
+		double firstNumber = 5.47;
+		double secondNumber = 3.73; 
 
+		
+		IAdd adder =(x,y) -> x +y;
+       	System.out.println(adder.add(firstNumber,secondNumber));
+       	
+       	BiConsumer<String,String > message = (K ,V) -> System.out.println(K+V);
+       	message.accept("random ", "test");
+       	
+       	IPrint printer =  () -> System.out.println("happyy");
+       	printer.print();
+       	
+       	//----------------------------------------------------
+       	IAction planetPrint = ()-> System.out.println("MARS");
+       	planetPrint.action();
+       	
+    	IAction animalName = ()-> System.out.println("bear");
+       	animalName.action();
+       	
+    	IAction printWhatever = ()-> System.out.println("we can use one interface and define different implementation using lambda");
+    	printWhatever.action();
+       	//-------------------
+       	
 	}
 }
+
